@@ -1,0 +1,254 @@
+body {
+    background-color: #230046;
+    font-family: 'Acme';
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card__img {
+    width: 100%;
+    height: 850px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 50%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 50%, transparent);
+}/*Imagen de fondo*/
+
+.card__img-containt {
+    position: relative;
+}/*Posición texto Descripción*/
+
+.card__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    z-index: 1;
+}/*Texto Descripción*/
+
+.Componentes_Redes_Sociales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+} /*Diseño Logos Redes Sociales*/
+
+.Componentes_Redes_Sociales li {
+    flex-basis: calc(25% - 10px);
+    margin-bottom: 10px;
+}/*Diseño Logos Redes Sociales*/
+
+.Componentes_Redes_Sociales li:nth-child(4) {
+    flex-basis: calc(25% - 20px);
+    margin-right: 20px;
+}/*Diseño Logos Redes Sociales*/
+
+.Componentes_Redes_Sociales li:nth-last-child(-n+3) {
+    flex-basis: calc(33.33% - 10px);
+}/*Diseño Logos Redes Sociales*/
+
+.list {
+    text-align: center;
+    margin-right: 10px;
+} /*Diseño Logos Redes Sociales*/
+
+.Titulo_Redes_Sociales {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+} /*Titulo contenedor Redes Sociales*/
+
+.benefits {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+} /*Columna Beneficios*/
+
+.learning-process {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+} /*Columna Procesos*/
+
+.column {
+    text-align: center;
+} /*Columnas*/
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+} /*Lista*/
+
+li {
+    margin-bottom: 25px;
+    font-size: 25px;
+    color: #ffffff;
+} /*Texto Listas*/
+
+h2 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 10px;
+} /*Titulo Listas*/
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} /*Logos*/
+
+.logo {
+    width: 180px;
+}/* Tamaño Logo de las redes */
+
+.logo:hover {
+    animation: vibrate 1s linear both;
+} /* Tiempo de animación de los logos de las redes */
+
+@keyframes vibrate { 
+    0% {transform: translate(0);}
+    20% {transform: translate(-5px, 5px);}
+    40% {transform: translate(-5px, -5px);}
+    60% {transform: translate(5px, 5px);}
+    80% {transform: translate(5px, -5px);}
+    100% {transform: translate(0);}
+} /* Animación de los logos de las redes */
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-texto h3 {
+    text-align: left;
+    font-size: 25px;
+} /*Texto Footer*/
+
+.footer-component__redsocial {
+    display: flex;
+    justify-content: flex-start;
+} /*Ubicación logos footer*/
+
+.footer-component__redsocial-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+} /*Logos Lista Footer*/
+
+.footer-component__redsocial-list li {
+    margin-left: 20px;
+} /*Distancia entre logos footer*/
+
+.footer-component__redsocial-list li:first-child {
+    margin-left: 0;
+}/*Distancia entre el margen y los logos*/
+
+/*Para pantallas pequeñas*/
+@media (max-width: 768px) {
+    .card__img {
+    height: 500px;
+    }
+    
+    .card__text {
+    font-size: 14px;
+    }
+    
+    .Componentes_Redes_Sociales {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .benefits, .learning-process {
+    display: block;
+    width: 100%;
+    }
+    
+    h2 {
+    font-size: 25px;
+    }
+    
+    li {
+    font-size: 18px;
+    }
+    
+    .Titulo_Redes_Sociales {
+    font-size: 20px;
+    }
+    .logo {
+    width: 100px;
+    }
+    
+    #footer {
+    flex-direction: column;
+    height: 130px;
+    }
+    
+    .footer-component__redsocial {
+    justify-content: center;
+    }
+    
+    .footer-component__redsocial-list {
+    margin-top: 10px;
+    }
+}
+
+/*Para pantallas medianas*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .card__img {
+    height: 700px;
+    }
+    
+    .card__text {
+    font-size: 22px;
+    }
+    
+    .Componentes_Redes_Sociales {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .benefits, .learning-process {
+    display: block;
+    width: 100%;
+    }
+    
+    h2 {
+    font-size: 30px;
+    }
+    
+    li {
+    font-size: 25px;
+    }
+    
+    .logo {
+    width: 150px;
+    }
+    
+    #footer {
+    flex-direction: column;
+    }
+    
+    .footer-component__redsocial {
+    justify-content: center;
+    }
+    
+    .footer-component__redsocial-list {
+    margin-top: 10px;
+    }
+}
